@@ -1,0 +1,152 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #121212;
+  color: #eee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 3rem;
+  color: #1db954; /* Spotify green */
+}
+
+.header p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-top: 4px;
+}
+
+.player-container {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.player-info {
+  background: #181818;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #1db954aa;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.player-info label,
+.player-info select {
+  font-size: 1rem;
+  color: #eee;
+}
+
+.player-info select {
+  background: #282828;
+  border: none;
+  border-radius: 6px;
+  color: #eee;
+  padding: 8px;
+  cursor: pointer;
+  outline-offset: 2px;
+  outline-color: #1db954;
+}
+
+.track-info h2 {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #1db954;
+}
+
+.progress-bar {
+  position: relative;
+  height: 8px;
+  background: #282828;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  margin-top: 10px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #1db954;
+  width: 0%;
+  border-radius: 8px;
+  transition: width 0.25s ease;
+}
+
+.time-display {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 5px;
+}
+
+.game-and-video {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#videoPlayer {
+  max-width: 320px;
+  width: 100%;
+  border-radius: 12px;
+  background: black;
+  outline: none;
+}
+
+#gameCanvas {
+  border: 2px solid #1db954;
+  border-radius: 12px;
+  background-color: #181818;
+  width: 300px;
+  height: 300px;
+}
+
+.btn-restart {
+  background-color: #1db954;
+  border: none;
+  color: #121212;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 10px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  align-self: center;
+  transition: background-color 0.3s ease;
+}
+
+.btn-restart:hover {
+  background-color: #17a544;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .game-and-video {
+    flex-direction: column;
+  }
+  #gameCanvas, #videoPlayer {
+    width: 90vw;
+    height: auto;
+  }
+}

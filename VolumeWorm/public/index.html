@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wormfy - Player Gamificado</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Wormfy</h1>
+    <p>O player musical jogável</p>
+  </header>
+
+  <main class="player-container">
+    <section class="player-info">
+      <label for="videoSelect">Selecione a música:</label>
+      <select id="videoSelect" aria-label="Selecione a música">
+        <option value="videos/video1.mp4">Billie Jean - Michael Jackson</option>
+        <option value="videos/video2.mp4">Best of You - Foo Fighters</option>
+        <option value="videos/video3.mp4">Given Up - Linkin Park</option>
+        <option value="videos/video4.mp4">Robocop Gay - Mamonas Assassinas</option>
+        <option value="videos/video5.mp4">Love of my Life - Queen</option>
+        <option value="videos/video6.mp4">Chop Suey - System of a Down</option>
+        <option value="videos/video7.mp4">¿??</option>
+        <option value="videos/video8.mp4">?¿?</option>
+        <option value="videos/video9.mp4">??¿</option>
+      </select>
+
+      <div class="track-info">
+        <h2 id="trackTitle">Billie Jean - Michael Jackson</h2>
+      </div>
+
+      <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
+        <div class="progress-fill"></div>
+      </div>
+
+      <div class="time-display">
+        <span id="currentTime">0:00</span>
+        <span id="duration">0:00</span>
+      </div>
+    </section>
+
+    <section class="game-and-video">
+      <video id="videoPlayer" preload="metadata" playsinline></video>
+      <canvas id="gameCanvas" width="300" height="300" aria-label="Jogo da cobrinha para controle de volume"></canvas>
+    </section>
+
+    <button id="restartBtn" class="btn-restart">Reiniciar Jogo</button>
+  </main>
+
+  <script type="module" src="index.js"></script>
+</body>
+</html>
